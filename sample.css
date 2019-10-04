@@ -1,0 +1,32 @@
+#new > div{
+    display: none;
+  }
+  #new.able #recorder,
+  #new.unable #unableRecord{
+    display: block;
+  }
+  #recorder > *{
+    display: none;
+  }
+  #recorder.default #startButton,
+  #recorder.started #pauseButton,
+  #recorder.started #stopButton,
+  #recorder.paused #resumeButton,
+  #recorder.paused #stopButton,
+  #recorder.stopped #deleteButton,
+  #recorder.stopped #saveButton,
+  #recorder.stopped #player{
+    display: inline;
+  }
+  #new,
+  #saved{
+    padding: 5px 20px;
+  }
+  audio{
+    max-width: 100%;
+  }
+  #saved th,
+  #saved td{
+    border: 1px solid #000;
+    padding: 5px;
+  }

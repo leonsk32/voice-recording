@@ -1,0 +1,41 @@
+<html>
+
+<body>
+    <link rel="stylesheet" type="text/css" href="./sample.css">
+    <script type="text/javascript" src="./sample.js"></script>
+    <div id="new">
+        <p>新規</p>
+        <div id="recorder" class="default">
+            <a id="startButton">開始</a>
+            <a id="pauseButton">一時停止</a>
+            <a id="resumeButton">再開</a>
+            <a id="stopButton">停止</a>
+            <audio id="player" controls></audio>
+            <a id="deleteButton">削除</a>
+            <a id="saveButton">保存</a>
+        </div>
+        <div id="unableRecord">
+            <p>録音できません。マイクが無効になっているか、ブラウザが録音機能に対応していません。</p>
+        </div>
+    </div>
+    <div id="saved">
+        <p>保存済み</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>作成日時</th>
+                    <th>録音</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <script type="text/html" id="saved-tbody-template">
+          <tr>
+            <td><%= created %></td>
+            <td><audio src="<%= file %>" controls></td>
+          </tr>
+        </script>
+</body>
+
+</html>
